@@ -50,6 +50,7 @@ const Tasks = () => {
         <TextInput
           style={styles.textInput}
           placeholder={"Write A Task"}
+          placeholderTextColor="gray"
           value={task}
           onChangeText={(text) => setTask(text)}
         />
@@ -85,7 +86,7 @@ const styles = StyleSheet.create({
     flex: 0.95,
     height: 40,
     borderRadius: 5,
-    backgroundColor: "#3a3a3a",
+    // backgroundColor: "#3a3a3a",
     color: "white",
     paddingLeft: 10,
     fontSize: 20,
