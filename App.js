@@ -10,7 +10,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <Header title="TEMPERATURE" />
       <StatusBar style="auto" />
-      {/* <Weather /> */}
+      <Weather />
       <Header title="TASKS" />
       <Tasks />
       <Header title="F1 UPDATES" />

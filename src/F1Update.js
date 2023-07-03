@@ -1,11 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import caljson from "../Keys/Cal.json";
-
+// import bucketLink from "../Keys/BucketLink"
+// import axios from "axios";
 
 const F1Update = () => {
   //get Cal.json from S3 bucket
   const [data, setData] = useState(caljson);
+  const [raceData, setRaceData] = useState();
+
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       bucketLink
+  //     )
+  //     .then((response) => response.json())
+  //     .then((json) => setRaceData(json))
+  //     .catch((error) => console.error(error));
+  // }, []);
+
+  // if (!raceData) {
+  //   return (
+  //     <View>
+  //       <Text>Loading...</Text>
+  //     </View>
+  //   );
+  // }
 
   const currentDate = new Date();
   const upcomingRace = data.details.find((race) => {
